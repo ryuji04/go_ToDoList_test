@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{.title}}</title>
+</head>
+<body>
+    <h3>{{.title}}</h3>
+    <ul>
+    <form action="/" method="post">
+        <input type="text" name="text"></input>
+        
+        <input type="submit" value="送信">
+    </form>
+    {{range $index,$task:=.tasks}}
+    <li>{{$task.Id}}:{{$task.Text}}</li>
+    {{end}}
+    </ul>
+    </body>
+</html>
